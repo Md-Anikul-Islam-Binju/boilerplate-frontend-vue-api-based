@@ -5,6 +5,7 @@ import LoginPage from "@/views/auth/LoginPage";
 import RegisterPage from "@/views/auth/RegisterPage";
 import store from "@/store";
 import FotgotPassword from "@/views/auth/password/FotgotPassword";
+import ResetPassword from "@/views/auth/password/ResetPassword"
 
 const routes = [
     {
@@ -23,6 +24,13 @@ const routes = [
         path:'/forgot-password',
         name : FotgotPassword,
         component: FotgotPassword,
+        meta: { guest: true },
+    },
+
+    {
+        path:'/reset-password',
+        name : ResetPassword,
+        component: ResetPassword,
         meta: { guest: true },
     },
 
